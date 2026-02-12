@@ -1,154 +1,141 @@
-/* =========================
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* =========================
-   BASE
-========================= */
-body {
-  font-family: "Noto Sans JP", sans-serif;
-  background: #fff;
-  color: #111;
-  line-height: 1.9;
-  letter-spacing: 0.03em;
+body{
+  font-family:'Noto Sans JP', sans-serif;
+  background:#fffbea;
+  color:#111;
+  overflow-x:hidden;
 }
 
-/* =========================
-   HEADER
-========================= */
-.header {
-  padding: 40px 8%;
-  border-bottom: 1px solid #eee;
+/* HEADER */
+.header{
+  padding:40px 20px;
+  text-align:center;
+  background:#ffe600;
 }
 
-.logo {
-  font-family: "Oswald", sans-serif;
-  font-size: 28px;
-  letter-spacing: 2px;
-  font-weight: 600;
+.logo{
+  font-family:'Anton';
+  font-size:64px;
+  letter-spacing:4px;
 }
 
-/* =========================
-   HERO
-========================= */
-.hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 8%;
+.sub{
+  font-size:14px;
+  margin-top:8px;
 }
 
-.hero-title {
-  font-family: "Oswald", sans-serif;
-  font-size: clamp(40px, 9vw, 120px);
-  font-weight: 700;
-  line-height: 1.05;
-  margin-bottom: 24px;
+/* HERO */
+.hero{
+  text-align:center;
+  padding:120px 20px;
+  background:#00b140;
+  color:white;
 }
 
-.hero-date {
-  font-size: 18px;
-  letter-spacing: 3px;
+.hero-title{
+  font-family:'Anton';
+  font-size:72px;
+  line-height:1.1;
 }
 
-/* =========================
-   SECTION
-========================= */
-.section {
-  padding: 140px 8%;
-  max-width: 1000px;
+.countdown{
+  margin-top:20px;
+  font-size:28px;
 }
 
-.section-title {
-  font-family: "Oswald", sans-serif;
-  font-size: 64px;
-  margin-bottom: 60px;
-  letter-spacing: 2px;
+/* FLOATING WORDS */
+.floating-words span{
+  position:fixed;
+  font-family:'Anton';
+  font-size:48px;
+  opacity:.08;
+  pointer-events:none;
+  color:#000;
 }
 
-.text {
-  font-size: 17px;
-  max-width: 680px;
+/* GRID LAYOUT */
+.magazine-grid{
+  padding:120px 10%;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:60px;
 }
 
-/* =========================
-   INFO
-========================= */
-.info p {
-  margin-bottom: 14px;
-  font-size: 16px;
+.card{
+  background:white;
+  padding:50px;
+  border:6px solid #111;
+  transform:rotate(-1deg);
 }
 
-.info strong {
-  font-family: "Oswald", sans-serif;
-  display: inline-block;
-  width: 110px;
+.card:nth-child(even){
+  transform:rotate(2deg);
 }
 
-/* =========================
-   BUTTON
-========================= */
-.button {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 16px 48px;
-  border: 2px solid #111;
-  text-decoration: none;
-  color: #111;
-  font-family: "Oswald", sans-serif;
-  transition: 0.3s;
+.card h3{
+  font-family:'Anton';
+  font-size:40px;
+  margin-bottom:20px;
 }
 
-.button:hover {
-  background: #111;
-  color: #fff;
+.image{
+  padding:0;
+  overflow:hidden;
 }
 
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  text-align: center;
-  padding: 80px 0;
-  border-top: 1px solid #eee;
-  font-size: 14px;
-  color: #888;
+.image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.1);
 }
 
-/* =========================
-   SCROLL ANIMATION
-========================= */
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1.2s ease;
+/* MESSAGE */
+.message{
+  padding:150px 20px;
+  text-align:center;
+  background:#ffe600;
 }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
+.message h2{
+  font-family:'Anton';
+  font-size:60px;
+  margin-bottom:30px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
+/* FOOTER */
+.footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:40px;
+}
 
-  .section {
-    padding: 100px 6%;
+/* SCROLL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .magazine-grid{
+    grid-template-columns:1fr;
   }
 
-  .section-title {
-    font-size: 42px;
-  }
-
-  .hero-title {
-    font-size: 52px;
+  .hero-title{
+    font-size:48px;
   }
 }

@@ -3,89 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Takuto & Mayu Wedding</title>
 
-  <!-- Google Font（Popeyeっぽい太字サンセリフ） -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- ★ 外部CSS読み込み -->
-  <link rel="stylesheet" href="./style.css" />
+  <!-- Popeyeっぽい太字フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ======================
-  HEADER
-  ====================== -->
+  <!-- HEADER -->
   <header class="header">
-    <h1 class="logo">Takuto & Mayu</h1>
+    <h1 class="logo">TAKUTO & MAYU</h1>
+    <p class="sub">WEDDING INVITATION MAGAZINE</p>
   </header>
 
 
-  <!-- ======================
-  HERO
-  ====================== -->
-  <section class="hero fade">
-    <h2 class="hero-title">
-      WEDDING INVITATION
-    </h2>
-    <p class="hero-date">
-      2026.05.24
-    </p>
+  <!-- HERO -->
+  <section class="hero">
+    <h2 class="hero-title">LET'S CELEBRATE LOVE!</h2>
+    <p id="countdown" class="countdown"></p>
   </section>
 
 
-  <!-- ======================
-  MESSAGE
-  ====================== -->
-  <section class="section fade">
-    <h2 class="section-title">MESSAGE</h2>
-    <p class="text">
-      私たちは結婚式を挙げることになりました。<br>
-      日頃お世話になっている皆さまと<br>
-      特別な時間を過ごせれば幸いです。
-    </p>
-  </section>
+  <!-- RANDOM TYPO -->
+  <div class="floating-words">
+    <span>LOVE</span>
+    <span>PARTY</span>
+    <span>2026</span>
+    <span>FOREVER</span>
+    <span>SMILE</span>
+  </div>
 
 
-  <!-- ======================
-  INFORMATION
-  ====================== -->
-  <section class="section fade">
-    <h2 class="section-title">INFORMATION</h2>
+  <!-- ABOUT GRID -->
+  <section class="magazine-grid">
 
-    <div class="info">
-      <p><strong>Date</strong> 2026.05.24 13:00</p>
-      <p><strong>Place</strong> ○○ Wedding Hall Tokyo</p>
-      <p><strong>Dress Code</strong> Smart Casual</p>
+    <div class="card reveal">
+      <h3>ABOUT TAKUTO</h3>
+      <p>
+        バレーとコーヒーが好き。<br>
+        いつも明るくてポジティブ担当。
+      </p>
     </div>
+
+    <div class="card image reveal">
+      <img src="https://picsum.photos/600/700?random=1">
+    </div>
+
+    <div class="card reveal">
+      <h3>ABOUT MAYU</h3>
+      <p>
+        旅行とカフェ巡りが趣味。<br>
+        やさしさとセンスのかたまり。
+      </p>
+    </div>
+
+    <div class="card image reveal">
+      <img src="https://picsum.photos/600/600?random=2">
+    </div>
+
   </section>
 
 
-  <!-- ======================
-  RSVP
-  ====================== -->
-  <section class="section fade">
-    <h2 class="section-title">RSVP</h2>
-
-    <a href="#" class="button">
-      出欠を回答する
-    </a>
+  <!-- MESSAGE -->
+  <section class="message reveal">
+    <h2>MESSAGE</h2>
+    <p>
+      私たちの特別な1日を<br>
+      大切なみなさまと一緒に迎えられたら嬉しいです。
+    </p>
   </section>
 
 
-  <!-- ======================
-  FOOTER
-  ====================== -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2026 Takuto & Mayu</p>
+    <p>© 2026 Takuto & Mayu Wedding</p>
   </footer>
 
 
-
-  <!-- ★ 外部JS（bodyの最後が重要） -->
-  <script src="./script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

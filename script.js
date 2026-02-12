@@ -1,32 +1,48 @@
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-  // ========================
-  // フェードアニメ
-  // ========================
-  const fades = document.querySelectorAll(".fade");
+  /* ======================
+     スクロールアニメーション
+  ====================== */
+  const reveals = document.querySelectorAll(".reveal");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("active");
       }
     });
-  }, {
-    threshold: 0.15
   });
 
-  fades.forEach(el => observer.observe(el));
+  reveals.forEach(r => observer.observe(r));
 
 
-  // ========================
-  // ボタン安全処理（null防止）
-  // ========================
-  const btn = document.querySelector(".button");
+  /* ======================
+     カウントダウン
+  ====================== */
+  const countdown = document.getElementById("countdown");
+  const weddingDate = new Date("2026-05-01");
 
-  if (btn) {
-    btn.onclick = () => {
-      console.log("button clicked");
-    };
+  function updateCountdown(){
+    const now = new Date();
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    countdown.textContent = `Weddingまで あと ${days} 日`;
   }
+
+  updateCountdown();
+  setInterval(updateCountdown,1000);
+
+
+  /* ======================
+     ランダムタイポ配置
+  ====================== */
+  const words = document.querySelectorAll(".floating-words span");
+
+  words.forEach(w=>{
+    w.style.top = Math.random()*100 + "vh";
+    w.style.left = Math.random()*100 + "vw";
+    w.style.transform = `rotate(${Math.random()*360}deg)`;
+  });
 
 });
