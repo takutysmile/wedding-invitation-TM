@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ======================
-     スクロールアニメーション
-  ====================== */
+  /* スクロール reveal */
   const reveals = document.querySelectorAll(".reveal");
 
   const observer = new IntersectionObserver(entries=>{
@@ -13,35 +11,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  reveals.forEach(r => observer.observe(r));
+  reveals.forEach(r=>observer.observe(r));
 
 
-  /* ======================
-     カウントダウン
-  ====================== */
+  /* 秒までカウントダウン */
   const countdown = document.getElementById("countdown");
-  const weddingDate = new Date("2026-05-01");
+  const wedding = new Date("2026-05-01T10:00:00");
 
-  function updateCountdown(){
-    const now = new Date();
-    const diff = weddingDate - now;
+  function update(){
+    const diff = wedding - new Date();
 
-    const days = Math.floor(diff / (1000*60*60*24));
-    countdown.textContent = `Weddingまで あと ${days} 日`;
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor(diff/3600000)%24;
+    const m = Math.floor(diff/60000)%60;
+    const s = Math.floor(diff/1000)%60;
+
+    countdown.textContent =
+      `${d}日 ${h}時間 ${m}分 ${s}秒`;
   }
 
-  updateCountdown();
-  setInterval(updateCountdown,1000);
+  setInterval(update,1000);
+  update();
 
 
-  /* ======================
-     ランダムタイポ配置
-  ====================== */
-  const words = document.querySelectorAll(".floating-words span");
+  /* パララックス */
+  const bg = document.querySelector(".parallax");
 
-  words.forEach(w=>{
-    w.style.top = Math.random()*100 + "vh";
-    w.style.left = Math.random()*100 + "vw";
+  window.addEventListener("scroll", ()=>{
+    bg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+  });
+
+
+  /* ランダムタイポ */
+  document.querySelectorAll(".floating-words span").forEach(w=>{
+    w.style.top = Math.random()*100+"vh";
+    w.style.left = Math.random()*100+"vw";
     w.style.transform = `rotate(${Math.random()*360}deg)`;
   });
 

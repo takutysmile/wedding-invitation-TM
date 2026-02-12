@@ -2,87 +2,86 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Takuto & Mayu Wedding</title>
 
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Popeyeっぽい太字フォント -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1 class="logo">TAKUTO & MAYU</h1>
-    <p class="sub">WEDDING INVITATION MAGAZINE</p>
-  </header>
+<!-- ===== HEADER（固定表示） ===== -->
+<header class="header">
+  <h1>TAKUTO & MAYU</h1>
+  <nav>
+    <a href="#about">ABOUT</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+</header>
 
 
-  <!-- HERO -->
-  <section class="hero">
+<!-- ===== HERO + PARALLAX ===== -->
+<section class="hero">
+  <div class="parallax bg1"></div>
+  <div class="hero-inner">
     <h2 class="hero-title">LET'S CELEBRATE LOVE!</h2>
     <p id="countdown" class="countdown"></p>
-  </section>
+  </div>
+</section>
 
 
-  <!-- RANDOM TYPO -->
-  <div class="floating-words">
-    <span>LOVE</span>
-    <span>PARTY</span>
-    <span>2026</span>
-    <span>FOREVER</span>
-    <span>SMILE</span>
+<!-- ===== FLOATING TYPO ===== -->
+<div class="floating-words">
+  <span>LOVE</span>
+  <span>PARTY</span>
+  <span>2026</span>
+  <span>SMILE</span>
+  <span>FOREVER</span>
+</div>
+
+
+<!-- ===== ABOUT GRID ===== -->
+<section id="about" class="magazine-grid">
+
+  <div class="card reveal">
+    <h3>TAKUTO</h3>
+    <p>バレーとコーヒー好き。<br>ポジティブ担当。</p>
   </div>
 
+  <div class="card image reveal">
+    <img src="https://picsum.photos/600/700?random=1">
+  </div>
 
-  <!-- ABOUT GRID -->
-  <section class="magazine-grid">
+  <div class="card reveal">
+    <h3>MAYU</h3>
+    <p>旅行とカフェ巡り。<br>やさしさとセンスの人。</p>
+  </div>
 
-    <div class="card reveal">
-      <h3>ABOUT TAKUTO</h3>
-      <p>
-        バレーとコーヒーが好き。<br>
-        いつも明るくてポジティブ担当。
-      </p>
-    </div>
+  <div class="card image reveal">
+    <img src="https://picsum.photos/600/600?random=2">
+  </div>
 
-    <div class="card image reveal">
-      <img src="https://picsum.photos/600/700?random=1">
-    </div>
-
-    <div class="card reveal">
-      <h3>ABOUT MAYU</h3>
-      <p>
-        旅行とカフェ巡りが趣味。<br>
-        やさしさとセンスのかたまり。
-      </p>
-    </div>
-
-    <div class="card image reveal">
-      <img src="https://picsum.photos/600/600?random=2">
-    </div>
-
-  </section>
+</section>
 
 
-  <!-- MESSAGE -->
-  <section class="message reveal">
-    <h2>MESSAGE</h2>
-    <p>
-      私たちの特別な1日を<br>
-      大切なみなさまと一緒に迎えられたら嬉しいです。
-    </p>
-  </section>
+<!-- ===== RSVP ===== -->
+<section id="rsvp" class="rsvp reveal">
+  <h2>RSVP</h2>
+  <p>出席いただける方はフォームからご連絡ください</p>
+
+  <a class="btn" href="https://forms.gle/" target="_blank">
+    出席を返信する →
+  </a>
+</section>
 
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Takuto & Mayu Wedding</p>
-  </footer>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  © 2026 Takuto & Mayu Wedding
+</footer>
 
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

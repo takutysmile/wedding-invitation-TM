@@ -1,4 +1,3 @@
-/* RESET */
 *{
   margin:0;
   padding:0;
@@ -8,60 +7,72 @@
 body{
   font-family:'Noto Sans JP', sans-serif;
   background:#fffbea;
-  color:#111;
   overflow-x:hidden;
 }
 
-/* HEADER */
+/* ===== HEADER（固定） ===== */
 .header{
-  padding:40px 20px;
-  text-align:center;
+  position:fixed;
+  top:0;
+  width:100%;
   background:#ffe600;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:999;
 }
 
-.logo{
+.header h1{
   font-family:'Anton';
-  font-size:64px;
-  letter-spacing:4px;
+  font-size:36px;
 }
 
-.sub{
-  font-size:14px;
-  margin-top:8px;
+.header a{
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:bold;
+  color:black;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-top:80px;
+}
+
+.hero-inner{
   text-align:center;
-  padding:120px 20px;
-  background:#00b140;
-  color:white;
+  z-index:2;
 }
 
 .hero-title{
   font-family:'Anton';
-  font-size:72px;
-  line-height:1.1;
+  font-size:80px;
 }
 
 .countdown{
-  margin-top:20px;
   font-size:28px;
+  margin-top:20px;
 }
 
-/* FLOATING WORDS */
-.floating-words span{
-  position:fixed;
-  font-family:'Anton';
-  font-size:48px;
-  opacity:.08;
-  pointer-events:none;
-  color:#000;
+/* PARALLAX BG */
+.parallax{
+  position:absolute;
+  width:120%;
+  height:120%;
+  background:#00b140;
+  z-index:1;
 }
 
-/* GRID LAYOUT */
+/* ===== GRID ===== */
 .magazine-grid{
-  padding:120px 10%;
+  padding:150px 10%;
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:60px;
@@ -71,7 +82,7 @@ body{
   background:white;
   padding:50px;
   border:6px solid #111;
-  transform:rotate(-1deg);
+  transform:rotate(-2deg);
 }
 
 .card:nth-child(even){
@@ -81,35 +92,45 @@ body{
 .card h3{
   font-family:'Anton';
   font-size:40px;
-  margin-bottom:20px;
 }
 
+/* 画像ホバー拡大 */
 .image{
-  padding:0;
   overflow:hidden;
 }
 
 .image img{
   width:100%;
-  height:100%;
-  object-fit:cover;
+  transition:0.6s;
+}
+
+.image:hover img{
+  transform:scale(1.15);
+}
+
+/* ===== RSVP ===== */
+.rsvp{
+  background:#ffe600;
+  padding:140px 20px;
+  text-align:center;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:18px 40px;
+  background:#00b140;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
   transform:scale(1.1);
 }
 
-/* MESSAGE */
-.message{
-  padding:150px 20px;
-  text-align:center;
-  background:#ffe600;
-}
-
-.message h2{
-  font-family:'Anton';
-  font-size:60px;
-  margin-bottom:30px;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer{
   background:#111;
   color:white;
@@ -117,10 +138,10 @@ body{
   padding:40px;
 }
 
-/* SCROLL ANIMATION */
+/* ===== SCROLL ANIMATION ===== */
 .reveal{
   opacity:0;
-  transform:translateY(40px);
+  transform:translateY(60px);
   transition:1s;
 }
 
@@ -129,13 +150,11 @@ body{
   transform:none;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .magazine-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero-title{
-    font-size:48px;
-  }
+/* ===== FLOATING TYPO ===== */
+.floating-words span{
+  position:fixed;
+  font-family:'Anton';
+  font-size:60px;
+  opacity:.06;
+  pointer-events:none;
 }
