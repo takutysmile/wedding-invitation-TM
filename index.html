@@ -4,255 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Takuto & Mayu Wedding Invitation</title>
+  <title>Takuto & Mayu Wedding</title>
 
-  <!-- Google Font（POPEYEっぽい太字サンセリフ） -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Font（Popeyeっぽい太字サンセリフ） -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 
-  <style>
-    /* =====================
-       ベース
-    ===================== */
-    body {
-      margin: 0;
-      font-family: "Noto Sans JP", sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.8;
-    }
-
-    img {
-      width: 100%;
-      display: block;
-    }
-
-    section {
-      padding: 120px 8%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* =====================
-       ヘッダー
-    ===================== */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-family: "Oswald", sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: 2px;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: #111;
-      margin-left: 24px;
-      font-size: 14px;
-    }
-
-    /* =====================
-       ファーストビュー
-    ===================== */
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: #f7f7f7;
-      padding-top: 80px;
-    }
-
-    .hero h1 {
-      font-family: "Oswald", sans-serif;
-      font-size: 72px;
-      letter-spacing: 4px;
-      margin: 0;
-    }
-
-    .hero p {
-      margin-top: 16px;
-      font-size: 18px;
-    }
-
-    /* =====================
-       見出し（POPEYE風）
-    ===================== */
-    .title {
-      font-family: "Oswald", sans-serif;
-      font-size: 42px;
-      letter-spacing: 2px;
-      margin-bottom: 60px;
-      border-bottom: 4px solid #111;
-      display: inline-block;
-      padding-bottom: 8px;
-    }
-
-    /* =====================
-       グリッド
-    ===================== */
-    .grid {
-      display: grid;
-      gap: 40px;
-    }
-
-    .two {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .card {
-      background: #fafafa;
-      padding: 40px;
-      border-radius: 8px;
-    }
-
-    /* =====================
-       フッター
-    ===================== */
-    footer {
-      text-align: center;
-      padding: 80px 0;
-      border-top: 1px solid #eee;
-      font-size: 14px;
-    }
-
-    /* =====================
-       スクロールアニメーション
-    ===================== */
-    .fade {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 1s;
-    }
-
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* =====================
-       レスポンシブ
-    ===================== */
-    @media (max-width: 768px) {
-      .two {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-    }
-  </style>
+  <!-- ★ 外部CSS読み込み -->
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
 
-  <!-- =====================
-       ヘッダー
-  ===================== -->
-  <header>
-    <div class="nav">
-      <div class="logo">T & M</div>
-      <div>
-        <a href="#about">ABOUT</a>
-        <a href="#info">INFO</a>
-        <a href="#access">ACCESS</a>
-      </div>
-    </div>
+  <!-- ======================
+  HEADER
+  ====================== -->
+  <header class="header">
+    <h1 class="logo">Takuto & Mayu</h1>
   </header>
 
-  <!-- =====================
-       HERO
-  ===================== -->
-  <section class="hero">
-    <div>
-      <h1>Takuto & Mayu</h1>
-      <p>Wedding Invitation</p>
+
+  <!-- ======================
+  HERO
+  ====================== -->
+  <section class="hero fade">
+    <h2 class="hero-title">
+      WEDDING INVITATION
+    </h2>
+    <p class="hero-date">
+      2026.05.24
+    </p>
+  </section>
+
+
+  <!-- ======================
+  MESSAGE
+  ====================== -->
+  <section class="section fade">
+    <h2 class="section-title">MESSAGE</h2>
+    <p class="text">
+      私たちは結婚式を挙げることになりました。<br>
+      日頃お世話になっている皆さまと<br>
+      特別な時間を過ごせれば幸いです。
+    </p>
+  </section>
+
+
+  <!-- ======================
+  INFORMATION
+  ====================== -->
+  <section class="section fade">
+    <h2 class="section-title">INFORMATION</h2>
+
+    <div class="info">
+      <p><strong>Date</strong> 2026.05.24 13:00</p>
+      <p><strong>Place</strong> ○○ Wedding Hall Tokyo</p>
+      <p><strong>Dress Code</strong> Smart Casual</p>
     </div>
   </section>
 
-  <!-- =====================
-       ABOUT
-  ===================== -->
-  <section id="about" class="fade">
-    <h2 class="title">ABOUT US</h2>
 
-    <div class="grid two">
-      <div class="card">
-        <h3>Takuto</h3>
-        <p>アウトドアとコーヒーが好き。休日は散歩と写真。</p>
-      </div>
-      <div class="card">
-        <h3>Mayu</h3>
-        <p>旅行と本とパン屋巡りが好き。のんびり派。</p>
-      </div>
-    </div>
+  <!-- ======================
+  RSVP
+  ====================== -->
+  <section class="section fade">
+    <h2 class="section-title">RSVP</h2>
+
+    <a href="#" class="button">
+      出欠を回答する
+    </a>
   </section>
 
-  <!-- =====================
-       INFO
-  ===================== -->
-  <section id="info" class="fade">
-    <h2 class="title">WEDDING INFO</h2>
-    <div class="card">
-      <p>
-        2026.05.10 (Sun)<br>
-        12:00 Ceremony / 13:00 Party<br>
-        Tokyo
-      </p>
-    </div>
-  </section>
 
-  <!-- =====================
-       ACCESS
-  ===================== -->
-  <section id="access" class="fade">
-    <h2 class="title">ACCESS</h2>
-    <div class="card">
-      <p>東京都〇〇区〇〇1-2-3<br>〇〇駅 徒歩5分</p>
-    </div>
-  </section>
-
-  <!-- =====================
-       フッター
-  ===================== -->
-  <footer>
-    © 2026 Takuto & Mayu Wedding
+  <!-- ======================
+  FOOTER
+  ====================== -->
+  <footer class="footer">
+    <p>© 2026 Takuto & Mayu</p>
   </footer>
 
-  <!-- =====================
-       JS（スクロール演出）
-  ===================== -->
-  <script>
-    const fades = document.querySelectorAll(".fade");
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    });
 
-    fades.forEach(el => observer.observe(el));
-  </script>
+  <!-- ★ 外部JS（bodyの最後が重要） -->
+  <script src="./script.js"></script>
 
 </body>
 </html>
