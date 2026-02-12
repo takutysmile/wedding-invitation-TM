@@ -1,8 +1,8 @@
-// ==============================
-// スクロールフェードアニメーション
-// ==============================
 window.addEventListener("DOMContentLoaded", () => {
 
+  // ========================
+  // フェードアニメ
+  // ========================
   const fades = document.querySelectorAll(".fade");
 
   const observer = new IntersectionObserver((entries) => {
@@ -12,27 +12,21 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: "0px 0px -80px 0px"
+    threshold: 0.15
   });
 
   fades.forEach(el => observer.observe(el));
-});
 
 
-// ==============================
-// スムーススクロール（アンカー用）
-// ==============================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+  // ========================
+  // ボタン安全処理（null防止）
+  // ========================
+  const btn = document.querySelector(".button");
 
-    const target = document.querySelector(this.getAttribute("href"));
+  if (btn) {
+    btn.onclick = () => {
+      console.log("button clicked");
+    };
+  }
 
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
 });
