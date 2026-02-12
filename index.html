@@ -2,70 +2,78 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>Wedding Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Fonts（POPEYE風） -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <title>Takuto & Mayu Wedding</title>
+
+  <!-- Popeye風フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="hero">
-  <h1>TAKUTO & YUI</h1>
-  <p class="date">2026.05.24</p>
-</header>
+  <!-- ========= HERO ========= -->
+  <header class="hero">
+    <h1 class="names">
+      Takuto<br>&<br>Mayu
+    </h1>
+
+    <p class="sub">
+      Wedding Invitation<br>
+      2026.05.15 Tokyo
+    </p>
+  </header>
 
 
-<section class="block">
-  <h2>WELCOME</h2>
-  <p>
-    私たちの結婚式に<br>
-    ご出席いただけましたら幸いです
-  </p>
-</section>
+  <!-- ========= MESSAGE ========= -->
+  <section class="section">
+    <h2>MESSAGE</h2>
+    <p>
+      私たちは結婚式を挙げることになりました。<br>
+      大切な皆さまと特別な一日を<br>
+      一緒に過ごせたら幸いです。
+    </p>
+  </section>
 
 
-<section class="block">
-  <h2>INFORMATION</h2>
-  <ul>
-    <li>日時：2026年5月24日 14:00</li>
-    <li>会場：〇〇ホテル 東京</li>
-    <li>住所：東京都〇〇区〇〇</li>
-  </ul>
-</section>
+  <!-- ========= INFO ========= -->
+  <section class="section grid">
+    <div>
+      <h2>DATE</h2>
+      <p>2026年5月15日（土）<br>受付 12:00 / 開宴 13:00</p>
+    </div>
+
+    <div>
+      <h2>PLACE</h2>
+      <p>
+        〇〇ウェディングホール 東京<br>
+        東京都〇〇区〇〇1-2-3
+      </p>
+    </div>
+  </section>
 
 
-<section class="block">
-  <h2>SCHEDULE</h2>
-  <ul>
-    <li>13:30 受付</li>
-    <li>14:00 挙式</li>
-    <li>15:00 披露宴</li>
-  </ul>
-</section>
+  <!-- ========= GALLERY ========= -->
+  <section class="gallery">
+    <img src="https://picsum.photos/800/1000?1">
+    <img src="https://picsum.photos/800/1000?2">
+  </section>
 
 
-<section class="block rsvp">
-  <h2>RSVP</h2>
-
-  <form id="rsvpForm">
-    <input type="text" placeholder="お名前" required />
-    <select required>
-      <option value="">出欠</option>
-      <option>出席</option>
-      <option>欠席</option>
-    </select>
-    <button type="submit">送信</button>
-  </form>
-</section>
+  <!-- ========= RSVP ========= -->
+  <section class="section center">
+    <h2>RSVP</h2>
+    <button id="rsvpBtn">出欠を返信する</button>
+  </section>
 
 
-<footer>
-  <p>© 2026 Wedding Invitation</p>
-</footer>
+  <footer>
+    © 2026 Takuto & Mayu
+  </footer>
 
-<script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

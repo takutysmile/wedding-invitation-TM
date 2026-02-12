@@ -1,5 +1,3 @@
-document.getElementById("rsvpForm").addEventListener("submit", e => {
-    e.preventDefault();
-    alert("送信ありがとうございます！");
-  });
-  
+document.getElementById("rsvpBtn").onclick = () => {
+  window.open("https://forms.gle/", "_blank"); // 後でGoogleフォームURL入れる
+};
