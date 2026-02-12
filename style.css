@@ -7,68 +7,86 @@
 
 body {
   font-family: "Noto Serif JP", serif;
-  background: #fff;
   color: #111;
+  background: white;
   line-height: 2;
 }
 
 
-/* =========================
-   レイアウトの核（超重要）
-========================= */
-
-/* 横幅固定で雑誌感出す */
-.wrapper {
-  max-width: 1300px;
+/* ========================
+   ⭐ これが超重要（余白の核）
+======================== */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 60px; /* ← 左右余白ここで確保 */
 }
 
-/* 余白完全統一 */
+
+/* ========================
+   Header
+======================== */
+.site-header {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+nav a {
+  margin-left: 24px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
+
+
+/* ========================
+   Section
+======================== */
 .section {
   padding: 160px 0;
 }
 
+h2 {
+  font-size: 11px;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+}
 
-/* =========================
-   HERO
-========================= */
 
+/* ========================
+   Hero
+======================== */
 .hero {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
 }
 
 .names {
-  font-size: clamp(80px, 13vw, 160px);
-  font-weight: 700;
+  font-size: clamp(80px, 12vw, 160px);
   line-height: 1.05;
-  letter-spacing: 4px;
 }
 
 .sub {
   margin-top: 40px;
   font-size: 14px;
-  letter-spacing: 2px;
 }
 
 
-/* =========================
-   タイトル（極小）
-========================= */
-
-h2 {
-  font-size: 11px;
-  letter-spacing: 5px;
-  margin-bottom: 50px;
-}
-
-
-/* =========================
-   GRID
-========================= */
-
+/* ========================
+   Grid
+======================== */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -76,10 +94,9 @@ h2 {
 }
 
 
-/* =========================
+/* ========================
    Gallery
-========================= */
-
+======================== */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -93,38 +110,39 @@ h2 {
 }
 
 
-/* =========================
+/* ========================
    Button
-========================= */
+======================== */
+.center {
+  text-align: center;
+}
 
 button {
-  padding: 20px 60px;
-  background: #111;
-  color: #fff;
+  padding: 18px 60px;
+  background: black;
+  color: white;
   border: none;
-  letter-spacing: 3px;
-  cursor: pointer;
+  letter-spacing: 2px;
 }
 
 
-/* =========================
+/* ========================
    Footer
-========================= */
-
-footer {
-  padding: 80px 0;
+======================== */
+.site-footer {
+  padding: 60px 0;
   text-align: center;
+  border-top: 1px solid #eee;
   font-size: 12px;
   color: #777;
 }
 
 
-/* =========================
+/* ========================
    Mobile
-========================= */
-
+======================== */
 @media (max-width: 768px) {
-  .wrapper {
+  .container {
     padding: 0 24px;
   }
 
